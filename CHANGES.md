@@ -1,3 +1,9 @@
+# Version ＋α 1.6.1
+
+Super small addition after a while of being out of the game for a bit.
+
+- Auto-focuses the Continue button on the "Would you like to continue reviewing?" screen
+
 # Version ＋α 1.6
 
 Have the video shot and mostly edited! Just making the last few fixes (that I know of lol) before I release this.
