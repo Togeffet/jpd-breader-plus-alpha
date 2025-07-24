@@ -1,8 +1,14 @@
-# Version ＋α 1.6.1
+# Version ＋α 1.6.2
 
 Super small addition after a while of being out of the game for a bit.
 
 - Auto-focuses the Continue button on the "Would you like to continue reviewing?" screen
+
+# Version ＋α 1.6.1
+
+This release includes only one tiny change:
+
+- Fix layout on "Learn Vocab" page when using the link in the Review in 2D page
 
 # Version ＋α 1.6
 
