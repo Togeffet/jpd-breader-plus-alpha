@@ -28,7 +28,6 @@ const getInitialReviewCounts = () => {
 let shouldShow = false;
 const [initial_reviews_in_page_load_count, initial_total_review_count] = getInitialReviewCounts();
 
-// I know this is gross! I'll fix it...someday
 const showing_cards = window.location.href
   .split('&')
   .filter(part => part.startsWith('show_only'))[0]
@@ -36,7 +35,9 @@ const showing_cards = window.location.href
   .split(',');
 
 const in_review_mode =
-  showing_cards.length == 2 && showing_cards.includes('overdue') && showing_cards.includes('failed');
+  showing_cards.sort().toString() === ['failed', 'overdue'].sort().toString() ||
+  showing_cards.toString() === ['overdue'].toString() ||
+  showing_cards.toString() === ['failed'].toString();
 
 const toggleUnimportantElements = (forceHide = false) => {
   const should_hide = forceHide || shouldShow;

@@ -1,3 +1,9 @@
+# Version ＋α 1.6.3
+
+- Adds quick link for settings/experimental settings on both settings pages
+  - I believe experimental settings may only work for Patreon supporters, not sure what happens if you click this while not being subscribed...sorry if this leads to confusion lol
+- Fixes detection for "review mode" on deck pages - it'll be in review mode if you are looking at failed and/or due cards only now.
+
 # Version ＋α 1.6.2
 
 Super small addition after a while of being out of the game for a bit.
