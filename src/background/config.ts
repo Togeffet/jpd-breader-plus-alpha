@@ -29,6 +29,8 @@ export type Config = {
   disablePopupAutoClose: boolean;
   hideProgressBar: boolean;
   hideVocabOSuccessfulGrade: boolean;
+  dimKnownOn2DReview: boolean;
+  dimLearningOn2DReview: boolean;
   disable2DReviewing: boolean;
 
   disableJPDBAutoParsing: boolean;
@@ -74,11 +76,6 @@ Feel free to delete them or surround the options you don't want with /* and */
 .jpdb-word.never-forget:not(div.vocabulary-list .jpdb-word.never-forget) { color: inherit }
 .jpdb-word.blacklisted:not(div.vocabulary-list .jpdb-word.blacklisted) { color: inherit }
 .jpdb-word.unparsed:not(div.vocabulary-list .jpdb-word.unparsed) { color: inherit }
-
-/***** Dim known vocab in JPDB *****/
-
-.vocabulary-list .entry:has(.known),
-.vocabulary-list .entry:has(.learning) { opacity: 0.25 }
 
 /***** Black screen for OLED on JPDB *****/
 
@@ -134,6 +131,8 @@ button.blacklist {
   disablePopupAutoClose: false,
   hideVocabOSuccessfulGrade: false,
   hideProgressBar: false,
+  dimKnownOn2DReview: true,
+  dimLearningOn2DReview: true,
 
   disable2DReviewing: false,
   disableJPDBAutoParsing: false,

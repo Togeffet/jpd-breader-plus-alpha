@@ -1,3 +1,10 @@
+# Version ＋α 1.6.4
+- Fixes how 2D review styling is applied
+  - All deck page styling is only applied if you're reviewing using the "Review in 2D" or "Learn New Words" buttons (e.g. if you have the plus-alpha-setup=yeah_bro URL parameter present)
+  - Changes "dim successful words" custom CSS option into an option that only gets applied to the 2D review page
+  - This allows deck pages to not get weird styling applied if you aren't reviewing - and allows you to have more options with reviewing in 2D (for example, you can review Learning words now, in case you're impatient to wait for them to become due - like me recently lol)
+
+
 # Version ＋α 1.6.3
 
 - Adds quick link for settings/experimental settings on both settings pages

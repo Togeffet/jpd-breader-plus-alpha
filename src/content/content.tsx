@@ -154,18 +154,18 @@ export function onWordHoverStart({ target, x, y }: MouseEvent) {
 
   moveParentLinkIfExists((target as HTMLElement) ?? null);
 
-  if (popupKeyHeld || config.showPopupOnHover || config.touchscreenSupport) {
+  if (popupKeyHeld || config.showPopupOnHover) {
     // On mobile devices, the position of the popup is occasionally adjusted to ensure
     // it remains on the screen. However, due to the interaction between the 'onmouseenter'
     // event and the popup, there are instances where the popup appears and at the same
     // time a (review) button is being clicked.
-    if (config.touchscreenSupport) {
-      Popup.get().disablePointer();
+    // if (config.touchscreenSupport) {
+    //   Popup.get().disablePointer();
 
-      setTimeout(() => {
-        Popup.get().enablePointer();
-      }, 400);
-    }
+    //   setTimeout(() => {
+    //     Popup.get().enablePointer();
+    //   }, 400);
+    // }
 
     Popup.get().showForWord(target as JpdbWord, x, y);
   }

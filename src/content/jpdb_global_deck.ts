@@ -34,11 +34,6 @@ const showing_cards = window.location.href
   .replace('show_only=', '')
   .split(',');
 
-const in_review_mode =
-  showing_cards.sort().toString() === ['failed', 'overdue'].sort().toString() ||
-  showing_cards.toString() === ['overdue'].toString() ||
-  showing_cards.toString() === ['failed'].toString();
-
 const toggleUnimportantElements = (forceHide = false) => {
   const should_hide = forceHide || shouldShow;
 
@@ -109,7 +104,7 @@ const prepareTopSection = (config: any) => {
     showing_of_progress_p.style.lineHeight = '34px';
 
     // Only add spacer if enabled and on due/failed only
-    if (!config.disableExtraSpace && in_review_mode) {
+    if (!config.disableExtraSpace) {
       const spacer = document.createElement('div');
       Object.assign(spacer.style, {
         padding: '0px',
@@ -240,7 +235,7 @@ const jpdb_global_deck_main = (config: any) => {
   try {
     prepareTopSection(config);
 
-    if (in_review_mode && config.hideVocabOSuccessfulGrade) {
+    if (config.hideVocabOSuccessfulGrade) {
       const styleTag = document.createElement('style');
       styleTag.innerHTML = '.entry.overdue:has(.known), .entry.overdue:has(.learning) { display: none; }';
       document.head.insertAdjacentElement('beforeend', styleTag);
@@ -248,6 +243,28 @@ const jpdb_global_deck_main = (config: any) => {
 
     document.head.innerHTML +=
       '<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">';
+
+    let styles = '';
+
+    if (config.dimKnownOn2DReview) {
+      styles += `
+        .vocabulary-list .entry:has(.known) {
+          opacity: 0.25
+        }
+      `;
+    }
+
+    if (config.dimLearningOn2DReview) {
+      styles += `
+        .vocabulary-list .entry:has(.learning) {
+          opacity: 0.25
+        }
+      `;
+    }
+
+    const styleSheet = document.createElement('style');
+    styleSheet.textContent = styles;
+    document.head.appendChild(styleSheet);
   } catch (error) {
     showError(error);
   }

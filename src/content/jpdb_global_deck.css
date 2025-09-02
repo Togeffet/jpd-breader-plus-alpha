@@ -2,25 +2,21 @@ div.entry {
   flex-grow: 1;
 }
 
-div.entry.overdue ruby rt,
-div.entry.failed ruby rt {
+div.entry ruby rt {
   display: none;
 }
 
-div.entry.overdue div div:last-of-type,
-div.entry.failed div div:last-of-type {
+div.entry div div:last-of-type {
   display: none;
 }
 
-div.entry.overdue,
-div.entry.failed {
-  padding: 0 5px;
-  margin: 0;
-  align-items: center;
+div.entry {
+  padding: 0 5px !important;
+  margin: 0 !important;
+  align-items: center !important;
 }
 
-div.entry.overdue div,
-div.entry.failed div {
+div.entry div {
   justify-content: center;
   display: flex;
 }
@@ -45,7 +41,7 @@ div.entry.new {
   white-space: nowrap;
 }
 
-.entry.overdue div:nth-child(2) {
+.entry div:nth-child(2) {
   display: none !important;
 }
 
