@@ -60,7 +60,6 @@ if (start_review_form) {
   });
 
   learn_new_button.addEventListener('click', () => {
-    window.location.href =
-      'https://jpdb.io/deck?id=global&show_only=new&sort_by=by-frequency-global&plus-alpha-setup=yeah_bro#a';
+    window.location.href = 'https://jpdb.io/deck?id=global&show_only=new&sort_by=by-frequency-global#a';
   });
 }

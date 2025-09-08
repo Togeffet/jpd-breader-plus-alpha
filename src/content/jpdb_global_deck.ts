@@ -204,10 +204,7 @@ const prepareTopSection = (config: any) => {
       } else if (child.innerHTML.trim() === '' && index > 0) {
         // Next page link but it's blank
         child.innerHTML = 'Learn vocab';
-        child.setAttribute(
-          'href',
-          'https://jpdb.io/deck?id=global&show_only=new&sort_by=by-frequency-global&plus-alpha-setup=yeah_bro#a',
-        );
+        child.setAttribute('href', 'https://jpdb.io/deck?id=global&show_only=new&sort_by=by-frequency-global#a');
       }
 
       const existing_pagination_link_wrapper = document.createElement('div');
