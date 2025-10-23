@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "JPDBreader＋α",
-  "version": "1.6.5",
+  "version": "1.6.6",
   "description": "JPDB parsing and mining in your browser",
   "icons": {
     "16": "icons/logo_16.png",
@@ -76,7 +76,7 @@
       "css": ["content/word.css"]
     },
     {
-      "matches": ["file:///*mokuro*.html", "*://*.mokuro.moe/manga/*.html"],
+      "matches": ["https://reader.mokuro.app/*", "file:///*mokuro*.html", "*://*.mokuro.moe/manga/*.html"],
       "js": ["integrations/mokuro.js"],
       "css": ["content/word.css"]
     },

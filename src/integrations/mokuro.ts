@@ -70,7 +70,13 @@ try {
     },
   );
 
-  for (const page of document.querySelectorAll('#pagesContainer > div')) {
+  let pages = document.querySelectorAll('#manga-panel > div');
+
+  if (pages.length === 0) {
+    pages = document.querySelectorAll('#pagesContainer > div');
+  }
+
+  for (const page of pages) {
     visible.observe(page);
   }
 } catch (error) {

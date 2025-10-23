@@ -1,3 +1,7 @@
+# Version ＋α 1.6.6
+
+- Updates mokuro integration to work with reader.mokuro.app
+
 # Version ＋α 1.6.5
 
 - Changes URL of Learn New Words to not have the same layout as a 2D review session (just a small bug introduced last update)
